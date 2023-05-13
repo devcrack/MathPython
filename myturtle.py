@@ -15,7 +15,8 @@ def simple_turtle():
     # triangle_figure(300)
     # simple_polygon(100, 5)
     # turtle_spiral()
-    draw_start()
+    # draw_start()
+    draw_star_spiral(45)
     exitonclick()
 
 
@@ -77,8 +78,15 @@ def turtle_spiral():
         length += 5
 
 
-def draw_start(lenght):
+def draw_start(length):
     for i in range(5):
-        forward(lenght)
+        forward(length)
         right(144)
 
+
+def draw_star_spiral(ini_length):
+    a_length = ini_length
+    for i in range(60):
+        draw_start(a_length)
+        right(5)
+        a_length += 5
