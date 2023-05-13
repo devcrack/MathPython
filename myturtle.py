@@ -5,13 +5,17 @@ title("Math with Python")
 screen = Screen()
 screen.colormode(255)
 
+
 def simple_turtle():
     # Blank shape for not show figures.
 
     shape('blank')
     # circle_squares()
     # square_trail_by_loop()
-    triangle_figure(300)
+    # triangle_figure(300)
+    # simple_polygon(100, 5)
+    # turtle_spiral()
+    draw_start()
     exitonclick()
 
 
@@ -53,9 +57,28 @@ def circle_squares():
 
 def triangle_figure(side_length):
     for i in range(3):
-        right(120)
         forward(side_length)
+        right(120)
 
 
+def simple_polygon(side_lenght, sides_number):
+    angle = 360 / sides_number
 
+    for i in range(sides_number):
+        forward(side_lenght)
+        right(angle)
+
+
+def turtle_spiral():
+    length = 25
+    for i in range(60):
+        simple_polygon(length, 4)
+        right(5)
+        length += 5
+
+
+def draw_start(lenght):
+    for i in range(5):
+        forward(lenght)
+        right(144)
 
